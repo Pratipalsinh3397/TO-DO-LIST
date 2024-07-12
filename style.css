@@ -1,0 +1,214 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #77E4C8;  
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #4535C1;
+}
+
+#todo{
+    background-color: white;
+    width: 400px;
+    margin: 100px auto 0px auto;
+    box-shadow: 0px 0px 20px #4535C1;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    margin: 0;  
+}
+
+#todo-text{
+    padding: 10px;
+    margin: 20px 0px 20px 43px;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #4535C1;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: #4535C1;
+    background-color: transparent;
+}
+
+#todo-text::placeholder{
+    color: #4535C1;
+}
+
+#add{
+    border: 2px solid #4535C1;
+    padding: 8px 30px;
+    margin: 20px 43px 20px 0px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    background-color: #4535C1;
+    color: white;
+    cursor: pointer;
+}
+
+#add:hover{
+    color: #4535C1;
+    background-color: white;
+    border: 1px solid #4535C1;
+    transition: ease 0.2s;
+    box-shadow: 0px 0px 10px #4535C1;
+
+}
+
+#todo-list{
+    width: 314px;
+    margin: 10px auto;
+    padding: 10px;
+    overflow: auto;
+}
+
+#todo-list::-webkit-scrollbar{
+    width: 0.6rem;
+}
+
+#todo-list::-webkit-scrollbar-thumb{
+    background-color: #4535C1;
+    border-radius: 10px;
+}
+
+#todo-list::-webkit-scrollbar-track{
+    display: none;
+}
+#todo-list li{
+    background-color: #4535C1;
+    color: white;
+    list-style-type: none;
+    position: relative;
+    padding: 10px 10px 10px 50px;
+    margin: 30px 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+#todo-list li .checkbox{
+    appearance: none;
+}
+
+#todo-list li .checkbox::before{
+    content: '\f00c';
+    color: transparent;
+    height: 20px;
+    width: 20px;
+    font-size: 17px;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    padding: 5px 5px;
+    text-align: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+#todo-list li .checkbox:checked::before{
+    color: white;
+    background-color: green;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+.complete{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-style: double;
+    color: white;
+}
+.line{
+    width: 380px;
+    margin: 0px auto;
+    border: 0.5px solid #4535C1;
+}
+    
+small{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+    font-size: 12px;
+}
+
+.spanOne,.spanTwo{
+    margin-right: 5px;
+}
+
+#removeAll{
+    border: none;
+    background-color: transparent;
+    color: #4535C1;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.fa-trash-can{
+    float: right;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 5px 7px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-trash-can:hover{
+    background-color: white;
+    color: #4535C1;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 400px){
+    #todo{
+        width: 300px;
+    }
+
+    h2{
+        font-size: 25px;
+    }
+
+    #todo-text{
+        padding: 5px;
+        margin: 20px 0px 20px 13px;
+        width: 200px;
+    }
+
+    #add{
+        padding: 8px 20px;
+        margin: 20px 0px 20px 0px;
+    }
+
+    #todo-list{
+        width: 285px;
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .line{
+        width: 300px;
+        margin: 0px auto;
+        border: 0.5px solid #4535C1;
+    }
+}
