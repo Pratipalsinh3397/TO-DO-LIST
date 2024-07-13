@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="to-do-list.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=DM+Serif+Display&family=Playwrite+DE+Grund&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
@@ -12,7 +13,10 @@
 </head>
 <body>
     <div id="todo">
-        <h2>TO-DO LIST📝</h2>
+        <div id="inner-div">
+            <p>TO-DO LIST</p>
+            <img src="checklist.png" alt="Not Found" id="image" style="height:50px;width:50px;">
+        </div>
         <input type="text" id="todo-text" placeholder="Enter your task" autocomplete="off">
         <button type="button" id="add">Add</button>
         <ul id="todo-list" class="listContainer">
